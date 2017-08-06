@@ -2,7 +2,12 @@
     <div class="row">
         <div class="col-md-6">
             <h1>Welcome Home!</h1>
-            <h3>Does the color change?</h3>
+            <h3>{{ 'My' }} name is {{ getName() }} and I'm {{ age }}</h3>
+            <button class="btn btn-primary" [disabled]="!allowClick" (click)="onButtonClicked()">Click Me!</button>
+            <h2 [innerText]="allowClick"></h2>
+            <h3>{{ btnClick }}</h3>
+            <input type="text" [(ngModel)]="lastName">
+            <p>{{ lastName }}</p>
         </div>
     </div>
 </div>
