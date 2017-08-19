@@ -5,9 +5,13 @@
             <h3>{{ 'My' }} name is {{ getName() }} and I'm {{ age }}</h3>
             <button class="btn btn-primary" [disabled]="!allowClick" (click)="onButtonClicked()">Click Me!</button>
             <h2 [innerText]="allowClick"></h2>
-            <h3>{{ btnClick }}</h3>
+            <h3 *ngIf="buttonClicked">{{ btnClick }}</h3>
             <input type="text" [(ngModel)]="lastName">
             <p>{{ lastName }}</p>
+            <app-test *ngFor="let t of tests"></app-test>
+            <p *ngFor="let t of tests; let i = index">
+                {{'test' + (i + 1)}}
+            </p>
         </div>
     </div>
 </div>

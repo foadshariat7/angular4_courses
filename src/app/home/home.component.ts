@@ -10,6 +10,9 @@ export class HomeComponent implements OnInit{
   name: string = "Foad";
   btnClick = "Button is not clicked!";
   lastName = "";
+  buttonClicked = false;
+
+  tests = ['test1', 'test2', 'test3'];
 
   allowClick = false;
 
@@ -24,7 +27,9 @@ export class HomeComponent implements OnInit{
   }
 
   onButtonClicked(){
+    this.buttonClicked = true;
     this.btnClick = "Button now is clicked!";
+    this.tests.push('test');
   }
 
   getName(){
